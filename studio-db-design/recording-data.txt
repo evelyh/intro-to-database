@@ -1,0 +1,125 @@
+Notes:
+This data is described in a way the is not intended to suggest what your
+database design should be!
+
+You MUST use this data for Task 3 of Part 1.
+
+We included some of the names in quotation marks. 
+The quotation marks are NOT part of the name.
+
+
+=== Studios ===
+
+- "Pawnee Recording Studio" is located at 123 Valley spring lane, Pawnee, Indiana.
+	* The studio has been managed by Donna Meagle  (ID: 1233) since Dec 2, 2018.
+	* Before that, it was managed by Tom Haverford (ID: 1234) from Jan 13, 2017.
+	* Before that, it was managed by April Ludgate (ID: 1231) from Mar 21, 2008.
+
+- "Pawnee Sound" is located at 353 Western Ave, Pawnee, Indiana.
+	* The studio has been managed by Donna Meagle (ID: 1233) since May 7, 2011.
+
+- "Eagleton Recording Studio" is located at 829 Division, Eagleton, Indiana.
+	* The studio has been managed by Leslie Knope  (ID: 1232) since Sep 5, 2020.
+	* Before that, it was managed by Tom Haverford (ID: 1234) from Sep 5, 2016.
+	* Before that, it was managed by Leslie Knope  (ID: 1232) from Sep 5, 2010.
+
+
+== Recording Engineers ==
+
+- Ben Wyatt (ID: 5678) has the following certificates.
+	- ABCDEFGH-123I
+	- JKLMNOPQ-456R
+
+- Ann Perkins (ID: 9942) has the following certificates.
+	- SOUND-123-AUDIO
+	
+- Chris Traeger (ID: 6521) has no certificates.
+
+
+== Bands ==
+
+- Band "Mouse Rat" is composed of the follwoing members:
+	- Vocalist Andy Dwyer (ID: 6754).
+	- Guitarist Andrew Burlinson (ID: 4523).
+	- Vocalist/Bass Michael Chang (ID: 2224).
+	- Drummer James Pierson (ID: 7832).
+
+
+== Sessions ==
+
+- Band Mouse Rat, with Duke Silver (ID: 1000) recorded 3 sesions at "Pawnee Recording Studio", each costing $1500.
+	- The first session started on Jan 8, 2023, at 10:00 and ended on Jan 8, 2023 at 15:00.
+	- The first session resulted in 10 segments, of one minute each, recorded as WAV. 
+	  	* None of the segments were used for any tracks.
+	
+	- The second session started on Jan 10, 2023, at 13:00 and ended on Jan 11, 2023, at 14:00.
+	- The second session resulted in 5 segments, of one minute each, recorded as WAV. 
+	  	* All segments were used for "5,000 Candles in the Wind" on album "The Awesome Album".
+
+	- The third session started on Jan 12, 2023, at 18:00 and ended on Jan 13, 2023 at 20:00.
+	- The third session resulted in 4 segments, of one minute each, recorded as WAV. 
+	  	* All segments were used for "Catch Your Dream" on album "The Awesome Album".
+	
+	- Ben Wyatt and Ann Perkins were the recording engineers for all 3 sessions.
+
+
+- Band Mouse Rat later recorded 2 more sessions at "Pawnee Recording Studio", each costing $2000.
+	- The first session started on Mar 10, 2023, at 11:00 and ended on Mar 10, 2023 at 23:00.
+	- The first session resulted in 2 segments, of 2 minutes each, recorded as WAV. 
+	  	* All segments were used for "Catch Your Dream" on album "The Awesome Album".
+
+	- The second session started on Mar 11, 2023, at 13:00 and ended on Mar 12, 2023, at 15:00.
+	- The second session resulted in no segments.
+	
+	- Ben Wyatt was the recording engineer for both sessions.
+
+
+- Andy Dwyer, with Tom Haverford (ID: 1234) recorded a session at "Pawnee Recording Studio", costing $1000.
+	- The session started on Mar 13, 2023 at 10:00 and ended on Mar 13, 2023 at 20:00.
+	- The session resulted in 5 segments, of one minute each, recorded as WAV.
+	  	* All segments were used for both "5,000 Candles in the Wind" and "Catch Your Dream" on album "The Awesome Album".
+
+	- Chris Traeger was the recording engineer for the session.
+	
+
+- Andy Dwyer recorded 2 sessions at "Eagleton Recording Studio", each costing $1000.
+	- The first session started on Sep 25, 2023, at 11:00 and ended on Sep 26, 2023 at 23:00.
+	- The first session resulted in 9 segments, of 3 minutes each, recorded as AIFF.
+	  	* The first 5 segments were unusable.
+	  	* The next two segments were used on track "May Song" of album "Another Awesome Album".
+	  	* The next two segments were used on track "The Pit" of album "Another Awesome Album".
+
+	- The second session started on Sep 29, 2023, at 11:00 and ended on Sep 30, 2023, at 23:00. 
+	- The second session resulted in 6 segments, of 3 minutes each, recorded as WAV. 
+	  	* The first two segments were used on track "Remember" of album "Another Awesome Album".
+	  	* The next two segments were used on track "The Way You Look Tonight" of album "Another Awesome Album.
+	  	* The next two segments were used on track "Another Song" of album "Another Awesome Album".
+	
+	- Ben Wyatt was the recording engineer for both sessions.
+
+
+== Albums ==
+
+- "The Awesome Album" (ID: 1) was released on May 25, 2023.
+
+- "Another Awesome Album" (ID: 2) was released on Oct 29, 2023
+
+
+You can make up the addresses, and phone numbers of all people mentioned above.
+
+
+== You may find this helpful ==
+
+If you have a series of inserts that are nearly identical, you may find it handy to write a loop.
+Here is an example. Try pasting these lines into postgreSQL to see what they do.
+
+CREATE TABLE Demo(val int);
+
+DO $$
+BEGIN
+	FOR i in 1..100 LOOP
+	INSERT INTO Demo(val) values(i);
+	END LOOP;
+END;
+$$;
+
